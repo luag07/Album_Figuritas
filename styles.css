@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #dbffdb;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+  }
+  
+  .figuritas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .figurita {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: #dbffdb;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    user-select: none;
+    position: relative;
+    transition: all 0.2s;
+  }
+  
+  .figurita.tachada {
+    background-color: #444;
+    color: #dbffdb;
+    border-color: #444;
+  }
+  
+  .figurita.tachada::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background-color: #dbffdb;
+    transform: rotate(-45deg);
+    top: 50%;
+    left: 20%;
+  }
+  
